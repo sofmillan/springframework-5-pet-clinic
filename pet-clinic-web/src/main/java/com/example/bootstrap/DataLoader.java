@@ -1,7 +1,5 @@
 package com.example.bootstrap;
 
-import com.example.map.OwnerServiceMap;
-import com.example.map.VetServiceMap;
 import com.example.model.Vet;
 import com.example.services.OwnerService;
 import com.example.services.VetService;
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
